@@ -12,7 +12,7 @@
   <element name="Token" type="xsd:string" /> 
   </all>
   </complexType>
-<complexType name="BTErroresNegocio">
+ <complexType name="BTErroresNegocio">
 <sequence>
   <element minOccurs="0" maxOccurs="unbounded" name="BTErrorNegocio" type="tns1:BTErrorNegocio" /> 
   </sequence>
@@ -25,7 +25,7 @@
   </all>
   </complexType>
   </schema>
- <schema targetNamespace="http://tempuri.org/action/" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" elementFormDefault="qualified">
+<schema targetNamespace="http://tempuri.org/action/" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" elementFormDefault="qualified">
   <import namespace="http://uy.com.dlya.bantotal/BTSOA/" /> 
   <import namespace="http://uy.com.dlya.bantotal/BTService/" /> 
   <import namespace="BTWorkFlow_Gx80" /> 
@@ -34,7 +34,7 @@
 <sequence>
   <element minOccurs="1" maxOccurs="1" name="Extreq" type="tns1:BTExtReq" /> 
   <element minOccurs="1" maxOccurs="1" name="Idcamara" type="xsd:short" /> 
-  <element minOccurs="1" maxOccurs="1" name="Accion" type="xsd:string" /> 
+  <element minOccurs="1" maxOccurs="1" name="Payload" type="xsd:string" /> 
   </sequence>
   </complexType>
   </element>
@@ -42,7 +42,9 @@
 <complexType>
 <sequence>
   <element minOccurs="1" maxOccurs="1" name="Extreq" type="tns1:BTExtReq" /> 
-  <element minOccurs="1" maxOccurs="1" name="Dscrespuesta" type="xsd:string" /> 
+  <element minOccurs="1" maxOccurs="1" name="Payload" type="xsd:string" /> 
+  <element minOccurs="1" maxOccurs="1" name="Coderr" type="xsd:short" /> 
+  <element minOccurs="1" maxOccurs="1" name="Errdsc" type="xsd:string" /> 
   <element minOccurs="1" maxOccurs="1" name="Erroresnegocio" type="tns1:BTErroresNegocio" /> 
   </sequence>
   </complexType>
